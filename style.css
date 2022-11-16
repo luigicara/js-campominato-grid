@@ -1,0 +1,62 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    padding: 0 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+main {
+    height: 85vh;
+    background-color: aquamarine;
+}
+
+.container {
+    max-width: 1140px;
+    padding: 3rem;
+    display: flex;
+}
+
+.box {
+    background-color: red;
+}
+
+.box.easy {
+    width: 10% - 10px;
+    margin: 5px;
+}
+
+.box.medium {
+    width: calc((100% / 9) - 10px);
+    margin: 5px;
+}
+
+.box.hard {
+    width: calc((100% / 7) - 10px);
+    margin: 5px;
+}
+
+.box.clicked {
+    background-color: aquamarine;
+}
+
+footer {
+    height: 5vh;
+    line-height: 5vh;
+    vertical-align: middle;
+}
