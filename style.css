@@ -28,27 +28,35 @@ main {
 
 .container {
     max-width: 1140px;
+    height: 100%;
+    margin: 0 auto;
     padding: 3rem;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .box {
     background-color: red;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
 }
 
 .box.easy {
-    width: 10% - 10px;
-    margin: 5px;
+    width: 10%;
+    height: 10%;
 }
 
 .box.medium {
-    width: calc((100% / 9) - 10px);
-    margin: 5px;
+    width: calc(100% / 9);
+    height:  calc(100% / 9);
 }
 
 .box.hard {
-    width: calc((100% / 7) - 10px);
-    margin: 5px;
+    width: calc(100% / 7);
+    height: calc(100% / 7);
 }
 
 .box.clicked {
