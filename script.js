@@ -35,7 +35,7 @@ btnPlay.addEventListener('click',
                     divListener.innerHTML = n + 1;
 
                     console.log(divListener.innerHTML);
-                }
+                }, {once: true}
             )
         }
 
