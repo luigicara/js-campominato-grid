@@ -13,10 +13,19 @@ btnPlay.addEventListener('click',
 
         let maxBox = checkDifficulty();
 
+        let arrBomb = genRandomNumbers(16, 1, maxBox);
+
+        console.log(arrBomb);
+
         let i = 1;
         
         while (i <= maxBox) {
             let newBox = createBox(difficulty.value);
+
+            if (arrBomb.includes(i)) {
+                newBox.innerHTML = "Boom!";
+                newBox.classList.add("boom");
+            }
 
             array.push(newBox);
 
@@ -31,10 +40,10 @@ btnPlay.addEventListener('click',
             divListener.addEventListener('click',
                 function() {
                     divListener.classList.add("clicked");
-        
-                    divListener.innerHTML = n + 1;
-
-                    console.log(divListener.innerHTML);
+                    
+                    for (let x = 0; x < 16; x++) {
+                        if (array.indexOf("divListener"))
+                    }
                 }, {once: true}
             )
         }
@@ -69,4 +78,23 @@ function createBox (classDifficult) {
     container.appendChild(div);
 
     return div
+}
+
+function randomInteger(min, max) {
+    return ( Math.floor(Math.random() * ((max + 1) - min) + min));
+}
+
+function genRandomNumbers(quantity, minNum, maxNum) {
+
+    const newArr = [];
+
+    while (newArr.length < quantity) {
+        let newNumber = randomInteger(minNum, maxNum);
+
+        if(!newArr.includes(newNumber)) {
+            newArr.push(newNumber);
+        }
+    }
+
+    return newArr
 }
