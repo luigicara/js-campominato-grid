@@ -40,10 +40,10 @@ btnPlay.addEventListener('click',
             divListener.addEventListener('click',
                 function() {
                     divListener.classList.add("clicked");
-                    
-                    for (let x = 0; x < 16; x++) {
-                        if (array.indexOf("divListener"))
-                    }
+        
+                    divListener.innerHTML = n + 1;
+
+                    console.log(divListener.innerHTML);
                 }, {once: true}
             )
         }
