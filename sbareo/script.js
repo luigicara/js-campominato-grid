@@ -34,14 +34,14 @@ btnPlay.addEventListener('click',
                 function () {
                 
                     if (!arrBomb.includes(parseInt(div.innerHTML))) {
-                        
+
                         div.classList.add("clicked");
 
                         pointsArr.push(div);
                     } else {
 
                         for (let n = 0; n < 16; n++) {
-                            let allRed = arrBomb[n]
+                            let allRed = arrBomb[n];
                             divsCollection[allRed - 1].classList.add("boom");
                         }
 
